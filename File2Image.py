@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from PIL import Image
 from sys import argv
+from binascii import hexlify
 
 # Get user input
 # File2Image.py <filename> <output> <8K> silent
@@ -66,8 +67,8 @@ def AppendC(c):
 
 main = Image.new('RGB', (h, w))
 msg("MODE: "+mode)
-with open(fname, 'r') as f:
-    content = f.read().encode("utf-8").hex() # File to hex
+with open(fname, 'rb') as f:
+    content = hexlify(f.read()).decode("utf-8") # File to hex
 
 #Convert from HEX into HEX colors
 msg("Converting into colors...")

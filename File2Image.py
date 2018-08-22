@@ -19,10 +19,10 @@ mode = "8K" # resolution to create image
 
 MSG = True
 
-if len(argv) < 4: # Command line control for mode
+if len(argv) > 3: # Command line control for mode
     mode = argv[3]
 
-if len(argv) < 5: # Command line control for silent
+if len(argv) > 4: # Command line control for silent
     if argv[4] == "silent":
         MSG = False
 

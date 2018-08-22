@@ -77,15 +77,16 @@ for line in lines:
     l = len(line)
     if l < 6:
         line += ('0'*(6 - l)) # Padding
-    c = '#' + line
-    msg(c)
-    counter += 1
-    if(counter == maxpixels):
-        counter2 += 1
-        msg("Saving image "+counter2)
-        main.save(opname+"_"+counter2)
-        main = Image.new('RGB', (h, w))
-    main = AppendC(c) # Append color into image
+    if line != "000000":
+        c = '#' + line
+        msg(c)
+        counter += 1
+        if(counter == maxpixels):
+            counter2 += 1
+            msg("Saving image "+counter2)
+            main.save(opname+"_"+counter2)
+            main = Image.new('RGB', (h, w))
+        main = AppendC(c) # Append color into image
 
 msg("Saving final image...")
 main.save(opname)

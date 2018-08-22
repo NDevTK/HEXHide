@@ -21,7 +21,7 @@ if len(argv) < 3:
 else:
     opname = argv[2]
 
-if len(argv) > 3: # Command line control for silent
+if len(argv) < 4: # Command line control for silent
     if argv[3] == "silent":
         MSG = False
 

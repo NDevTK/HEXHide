@@ -11,7 +11,7 @@ if len(argv) < 2:
 else:
     fname = argv[1]
 if len(argv) < 3:
-    opname = input("Output image name: ")
+    opname = input("Output file name: ")
 else:
     opname = argv[2]
 

@@ -29,6 +29,7 @@ if len(argv) > 4: # Command line control for silent
 
 size = 1 # Image2File only supports 1
 counter = 0
+counter2 = 0
 
 def msg(content):
     if(MSG):
@@ -40,6 +41,12 @@ if mode == "FHD":
 if mode == "480P":
     w = 640
     h = 480
+if mode == "SMALL": # May create a lot of files
+    w = 100
+    h = 100
+if mode == "SMALL+": # May create a lot of files
+    w = 50
+    h = 50
 if mode == "UHD":
     w = 3840
     h = 2160

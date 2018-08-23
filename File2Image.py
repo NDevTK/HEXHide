@@ -91,7 +91,7 @@ for line in lines:
         if(counter == maxpixels):
             counter = 0
             counter2 += 1
-            msg("Saving image "+counter2)
+            msg("Saving image "+str(counter2))
             main.save(opname+"_"+counter2)
             main = Image.new('RGB', (h, w))
         main = AppendC(c) # Append color into image

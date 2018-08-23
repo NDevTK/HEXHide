@@ -92,7 +92,7 @@ for line in lines:
             counter = 0
             counter2 += 1
             msg("Saving image "+str(counter2))
-            main.save(opname+"_"+str(counter2))
+            main.save(opname+"_"+str(counter2)+".png")
             main = Image.new('RGB', (h, w))
         main = AppendC(c) # Append color into image
 

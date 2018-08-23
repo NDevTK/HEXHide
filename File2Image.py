@@ -82,6 +82,7 @@ for line in lines:
         msg(c)
         counter += 1
         if(counter == maxpixels):
+            counter = 0
             counter2 += 1
             msg("Saving image "+counter2)
             main.save(opname+"_"+counter2)
